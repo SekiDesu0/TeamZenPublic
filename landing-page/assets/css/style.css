@@ -1,0 +1,81 @@
+/* Estilos para el carrusel */
+.c-item {
+  height: 100vh;
+  max-height: 727px;
+}
+
+.c-img {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .c-item {
+      height: 70vh;
+      min-height: 400px;
+  }
+  .carousel-caption {
+      padding-top: 0 !important;
+  }
+  .carousel-caption h1 {
+      font-size: 2rem !important;
+  }
+  .carousel-caption p {
+      font-size: 1rem !important;
+      margin-top: 0.5rem !important;
+  }
+  .carousel-caption .btn {
+      margin-top: 1rem !important;
+      font-size: 1rem !important;
+      padding: 0.5rem 1rem !important;
+  }
+}
+
+/* Contenedor principal para el efecto slider */
+.slider-container {
+  scroll-snap-type: y mandatory; /* Habilita el scroll snapping en el eje Y */
+  overflow-y: scroll; /* Habilita el scroll vertical */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+
+/* Cada sección será un punto de snap */
+.slider-section {
+  scroll-snap-align: start; /* Alinea el inicio de cada sección */
+  min-height: 100vh; /* Cada sección ocupa al menos toda la altura de la ventana */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.slider-section-inicio {
+  scroll-snap-align: start; /* Alinea el inicio de cada sección */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Opcional: Ocultar scrollbars para una experiencia más limpia */
+.slider-container::-webkit-scrollbar {
+  display: none;
+}
+.slider-container {
+  -ms-overflow-style: none; /* IE y Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Ajustes responsivos para secciones */
+@media (max-width: 768px) {
+  .slider-section {
+      padding: 2rem 0;
+  }
+}
+
+/* Ajustes para el footer */
+footer {
+  padding: 1.5rem 0;
+}
+
+.logo{
+  width: 25px
+}
